@@ -1,0 +1,101 @@
+.chartsdiv {
+  margin-top: 15px;
+  padding: 5px;
+  height: 500px;
+  margin-left: 40px;
+  margin-right: 30px;
+}
+.chart1 {
+  display: inline-block;
+  width: 60%;
+  height: 500px;
+  /* padding: 5px; */
+  margin-right: 10px;
+  box-shadow: 1px 1px 1px 1px rgb(181, 181, 252);
+}
+.chart2 {
+  display: inline-block;
+  width: 30%;
+  height: 500px;
+  margin-left: 20px;
+  box-shadow: 1px 1px 1px 1px rgb(181, 181, 252);
+}
+#combo-box-demo {
+  /* margin-top: 25px; */
+  justify-content: center;
+  text-align: center;
+}
+body {
+  background-color: #f1f1f1;
+  min-width: 900px;
+}
+.divSection2 {
+  display: inline-block;
+  /* margin-left: 100%; */
+  height: 500px;
+  width: 100%;
+}
+.generateReport {
+  width: 5%;
+  /* height: 300px; */
+  display: inline-block;
+}
+.piechart1 {
+  width: 27%;
+  height: 500px;
+  margin-left: 10px;
+  margin-top: 30px;
+  display: inline-block;
+  /* margin-bottom: 30px; */
+  box-shadow: 1px 1px 1px 1px rgb(181, 181, 252);
+  margin-right: 15px;
+  margin-left: 40px;
+  /* padding-left: 500px; */
+}
+.barchart2 {
+  width: 42%;
+  height: 500px;
+  margin-left: 100px;
+  margin-top: 30px;
+  display: inline-block;
+  /* margin-bottom: 30px; */
+  margin-right: 27px;
+  box-shadow: 1px 1px 1px 1px rgb(181, 181, 252);
+}
+#table1 {
+  margin-top: 90%;
+  /* width: 700px; */
+}
+.tablecomp {
+  margin-top: 100px;
+  /* width: 300px; */
+  /* box-shadow: 5px blue; */
+}
+.addacc {
+  border-radius: 25px;
+  color: #042275;
+  margin-top: 20px;
+  background-color: white;
+  height: 80px;
+  width: 350px;
+  padding-top: 40px;
+  margin-right: 15px;
+  margin-left: 15px;
+  display: inline-block;
+  box-shadow: 2px 2px 2px 2px rgb(181, 181, 252);
+  font-size: larger;
+}
+
+/* @media only screen and (max-width: 768px) {
+  [class*="piechart1"] {
+    width: 50%;
+    display: block;
+    margin-left: 10px;
+  }
+  [class*="barchart2"] {
+    width: 50%;
+    display: block;
+    margin-left: 10px;
+    margin-top: 390px;
+  }
+} */
