@@ -38,6 +38,9 @@ const legendStyles = () => ({
     display: 'flex',
     margin: 'auto',
     flexDirection: 'row',
+    height: '120px',
+    paddingTop:'30px',
+    
   },
 });
 const legendRootBase = ({ classes, ...restProps }) => (
@@ -47,15 +50,32 @@ const Root = withStyles(legendStyles, { name: 'LegendRoot' })(legendRootBase);
 const legendLabelStyles = () => ({
   label: {
     whiteSpace: 'nowrap',
+    width: "39px",
+    marginRight:"29px",
+      flexFlow: "column wrap",
+      flexDirection:"row wrap",
+      paddingRight:'3%',
+      // backgroundColor:"#f1f1f1"
+
+    // height: "50px"
   },
 });
 const legendLabelBase = ({ classes, ...restProps }) => (
-  <Legend.Label className={classes.label} {...restProps} />
+  <>
+  {/* <hr></hr> */}
+    <Legend.Label className={classes.label} {...restProps} />
+
+  </>
 );
 const Label = withStyles(legendLabelStyles, { name: 'LegendLabel' })(legendLabelBase);
 const demoStyles = () => ({
   chart: {
-    paddingRight: '20px',
+    paddingRight: '40px',
+    paddingTop:'30px',
+    // backgroundColor: "#f1f1f1",
+    width:"100%",
+    height: '100%',
+    paddingLeft:'30px'
   },
 });
 
@@ -82,7 +102,7 @@ class Chart1 extends React.PureComponent {
     const { data: chartData } = this.state;
     const { classes } = this.props;
     return (
-      <Paper style={{height:"300px"}}>
+      <Paper style={{height:"460px", width:"100%", opacity:"1"}}>
         <Chart
           data={chartData}
           className={classes.chart}
@@ -129,7 +149,10 @@ class Chart1 extends React.PureComponent {
           />
           <Animation />
           <Legend position="bottom" rootComponent={Root} labelComponent={Label} />
-          <Title text="Interest Revenue " />
+          <Title text="Interest Revenue "  />
+          {/* <br></br> */}
+          {/* <Title/>
+          <Title/> */}
         </Chart>
       </Paper>
     );

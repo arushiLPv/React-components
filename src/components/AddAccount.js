@@ -23,10 +23,11 @@ function AddAccount() {
   };
     return (
         <div className="addacc">
-            Add Account
+            <b>Add Account</b>
             <span onClick={handleClickOpen} style={{justifyContent:"end",paddingRight:"30px", marginLeft:"70px", marginTop:"35px", paddingTop:"30px"}}>
                 <AddIcon style={{justifyContent:"end",paddingRight:"30px", marginLeft:"3px", marginTop:"0px", paddingTop:"0px"}}/>
             </span>
+            {/* <p>Total Accounts of Group 1</p> */}
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Add Account</DialogTitle>
         <DialogContent>
