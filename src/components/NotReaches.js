@@ -12,7 +12,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import CustomSearchBar1 from "./CustomSearchBar1";
 import {AccWrtGroups} from "../data/AccWrtGroups"
 
-function AddAccount() {
+function NotReaches() {
      const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -30,13 +30,13 @@ function AddAccount() {
 
       <div className="section_our_solution">
   <div className="row">
-    <div className="col-lg-12 col-md-12 col-sm-12" style={{marginTop:"-460px" ,marginLeft:"-1090px"}}>
+    <div className="col-lg-12 col-md-12 col-sm-12" style={{marginTop:"-460px"}}>
       <div className="our_solution_category">
         <div className="solution_cards_box">
           {/* <div className="solution_card">
             <div className="hover_color_bubble"></div>
             <div className="so_top_icon">
-              <svg id="Layer_1" enable-background="new 0 0 512 512" height="50" viewBox="0 0 0 0" width="40" xmlns="http://www.w3.org/2000/svg">
+              <svg id="Layer_1" enable-background="new 0 0 512 512" height="50" viewBox="0 0 512 512" width="40" xmlns="http://www.w3.org/2000/svg">
                 <g>
                   <g>
                     <g>
@@ -89,7 +89,7 @@ function AddAccount() {
               </p>
               <button type="button" className="read_more_btn" onClick={handleClickOpen}>Read More</button>
             </div>
-          </div>  */}
+          </div> */}
           {/* <div className="solution_card">
             <div className="hover_color_bubble"></div>
             <div className="so_top_icon">
@@ -146,10 +146,10 @@ function AddAccount() {
               </p>
               <button type="button" className="read_more_btn">Read More</button>
             </div>
-          </div> */}
+          </div>
         </div>
-       
-         <div className="solution_cards_box sol_card_top_3">
+       */}
+        {/* <div className="solution_cards_box sol_card_top_3"> */}
           <div className="solution_card">
             <div className="hover_color_bubble"></div>
             <div className="so_top_icon">
@@ -261,7 +261,7 @@ function AddAccount() {
               <br/>
               <br/>
               <p>
-                Total Accounts in the Group 12
+                Total Accounts in the Group         <nbsp></nbsp>         <nbsp></nbsp>    12
               </p>
               <button type="button" className="read_more_btn">Read More</button>
             </div>
@@ -292,4 +292,4 @@ function AddAccount() {
     )
 }
 
-export default AddAccount
+export default NotReaches

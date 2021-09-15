@@ -38,8 +38,8 @@ const legendStyles = () => ({
     display: 'flex',
     margin: 'auto',
     flexDirection: 'row',
-    height: '120px',
-    paddingTop:'30px',
+    height: '140px',
+    // paddingTop:'30px',
     
   },
 });
@@ -50,11 +50,14 @@ const Root = withStyles(legendStyles, { name: 'LegendRoot' })(legendRootBase);
 const legendLabelStyles = () => ({
   label: {
     whiteSpace: 'nowrap',
-    width: "39px",
+    width: "31px",
     marginRight:"29px",
+    marginLeft:"2px",
+    paddingRight:"30px",
       flexFlow: "column wrap",
       flexDirection:"row wrap",
-      paddingRight:'3%',
+      paddingRight:'5%',
+      color: "white"
       // backgroundColor:"#f1f1f1"
 
     // height: "50px"
@@ -74,8 +77,12 @@ const demoStyles = () => ({
     paddingTop:'30px',
     // backgroundColor: "#f1f1f1",
     width:"100%",
-    height: '100%',
-    paddingLeft:'30px'
+    // height: '100%',
+    paddingLeft:'30px',
+    // background:"dodgerblue"
+    background: "linear-gradient(87deg,#172b4d,#1a174d)!important",
+    color:"white",
+    height: "190px"
   },
 });
 
@@ -88,6 +95,20 @@ const Line = props => (
       .curve(curveCatmullRom)}
   />
 );
+const priceColor = 'white';
+const makeLabel = (symbol, color) => ({ text, style, ...restProps }) => (
+  <ValueAxis.Label
+    text={`${text} ${symbol}`}
+    style={{
+      fill: color,
+      ...style,
+    }}
+    {...restProps}
+  />
+);
+const LabelWithThousand = makeLabel('k', priceColor);
+
+const PriceLabel = makeLabel('$', priceColor);
 
 class Chart1 extends React.PureComponent {
   constructor(props) {
@@ -102,14 +123,15 @@ class Chart1 extends React.PureComponent {
     const { data: chartData } = this.state;
     const { classes } = this.props;
     return (
-      <Paper style={{height:"460px", width:"100%", opacity:"1"}}>
+      <Paper style={{height:"400px", width:"100%", opacity:"1", borderRadius:"35px",color:"white"}}>
         <Chart
           data={chartData}
           className={classes.chart}
         >
           <ArgumentScale factory={scalePoint} />
-          <ArgumentAxis />
-          <ValueAxis />
+          <ArgumentAxis labelComponent={priceColor}/>
+          <ValueAxis             labelComponent={PriceLabel}
+ />
 
           <LineSeries
             name="Account 1"
@@ -148,8 +170,8 @@ class Chart1 extends React.PureComponent {
             seriesComponent={Line}
           />
           <Animation />
-          <Legend position="bottom" rootComponent={Root} labelComponent={Label} />
-          <Title text="Interest Revenue "  />
+          <Legend position="bottom" rootComponent={Root} labelComponent={Label} marginLeft="-20px" />
+          <Title text="Interest Revenue " style={{color:"white"}} />
           {/* <br></br> */}
           {/* <Title/>
           <Title/> */}

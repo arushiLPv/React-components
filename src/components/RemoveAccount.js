@@ -8,7 +8,7 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import CustomSearchBar from "./CustomSearchBar";
+import CustomSearchBar1 from "./CustomSearchBar1";
 import {AccWrtGroups} from "../data/AccWrtGroups"
 import RemoveSharpIcon from '@material-ui/icons/RemoveSharp';
 
@@ -34,7 +34,7 @@ function RemoveAccount() {
           <DialogContentText>
             Type the Account number to get the matching searches of the linked Accounts.
           </DialogContentText>
-          <CustomSearchBar data={AccWrtGroups}/>
+          <CustomSearchBar1 data={AccWrtGroups}/>
           {/* <TextField
             autoFocus
             margin="dense"

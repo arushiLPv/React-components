@@ -47,7 +47,7 @@ export default class Barchart2 extends React.PureComponent {
     const { data: chartData } = this.state;
 
     return (
-      <Paper>
+      <Paper style={{height:"300px", width:"250px"}}>
         <Chart
           data={chartData}
         >
