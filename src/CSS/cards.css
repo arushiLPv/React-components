@@ -26,15 +26,18 @@
   box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
     0 5px 15px 0 rgba(37, 44, 97, 0.15);
   border-radius: 15px;
-  margin: 18px;
+  margin: 20px;
   padding: 10px 15px;
   position: relative;
   z-index: 1;
   overflow: hidden;
-  min-height: 105px;
-  min-width: 190px;
-  max-width: 250px;
+  min-height: 212px;
+  min-width: 280px;
+  max-width: 300px;
+  max-height: 308px;
   transition: 0.7s;
+  margin-left: -10px;
+  margin-right: 0px;
 }
 
 .solution_cards_box .solution_card:hover {
@@ -57,7 +60,7 @@
   content: "";
   position: absolute;
   background: rgb(85 108 214 / 5%);
-  width: 100px;
+  width: 90px;
   height: 500px;
   z-index: -1;
   transform: rotate(42deg);
@@ -77,13 +80,13 @@
 .solution_card .solu_title h3 {
   color: #212121;
   font-size: 1.3rem;
-  margin-top: 13px;
-  margin-bottom: 13px;
+  margin-top: 0px;
+  margin-bottom: 7px;
 }
 
 .solution_card .solu_description p {
   font-size: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .solution_card .solu_description button {

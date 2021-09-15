@@ -30,7 +30,7 @@ function AddAccount() {
 
       <div className="section_our_solution">
   <div className="row">
-    <div className="col-lg-12 col-md-12 col-sm-12" style={{marginTop:"-460px" ,marginLeft:"-1090px"}}>
+    <div className="col-lg-7 col-md-7 col-sm-7" style={{marginTop:"-460px" ,marginLeft:"-1090px"}}>
       <div className="our_solution_category">
         <div className="solution_cards_box">
           {/* <div className="solution_card">
@@ -202,7 +202,7 @@ function AddAccount() {
             </div>
             <div className="solu_description">
               <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+                Lean more about the Cient
               </p>
               <button type="button" className="read_more_btn">Read More</button>
             </div>
@@ -258,11 +258,12 @@ function AddAccount() {
               <h3>Group Details</h3>
             </div>
             <div className="solu_description">
-              <br/>
-              <br/>
+              
               <p>
                 Total Accounts in the Group 12
               </p>
+              
+              <br></br>
               <button type="button" className="read_more_btn">Read More</button>
             </div>
           </div>

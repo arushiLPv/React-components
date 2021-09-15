@@ -17,6 +17,8 @@ import {
 } from 'd3-shape';
 import { scalePoint } from 'd3-scale';
 import '@devexpress/dx-react-chart-bootstrap4/dist/dx-react-chart-bootstrap4.css';
+import { EventTracker, HoverState } from '@devexpress/dx-react-chart';
+
 
 
 const data = [
@@ -81,6 +83,7 @@ const demoStyles = () => ({
     paddingLeft:'30px',
     // background:"dodgerblue"
     background: "linear-gradient(87deg,#172b4d,#1a174d)!important",
+    borderRadius:"25px",
     color:"white",
     height: "190px"
   },
@@ -106,7 +109,7 @@ const makeLabel = (symbol, color) => ({ text, style, ...restProps }) => (
     {...restProps}
   />
 );
-const LabelWithThousand = makeLabel('k', priceColor);
+const LabelWithThousand = makeLabel('', priceColor);
 
 const PriceLabel = makeLabel('$', priceColor);
 
@@ -123,13 +126,13 @@ class Chart1 extends React.PureComponent {
     const { data: chartData } = this.state;
     const { classes } = this.props;
     return (
-      <Paper style={{height:"400px", width:"100%", opacity:"1", borderRadius:"35px",color:"white"}}>
+      <Paper style={{height:"400px", width:"1000px", opacity:"1", borderRadius:"35px",color:"white"}}>
         <Chart
           data={chartData}
           className={classes.chart}
         >
           <ArgumentScale factory={scalePoint} />
-          <ArgumentAxis labelComponent={priceColor}/>
+          <ArgumentAxis labelComponent={LabelWithThousand}/>
           <ValueAxis             labelComponent={PriceLabel}
  />
 
@@ -171,6 +174,9 @@ class Chart1 extends React.PureComponent {
           />
           <Animation />
           <Legend position="bottom" rootComponent={Root} labelComponent={Label} marginLeft="-20px" />
+                    <EventTracker />
+                    <HoverState/>
+
           <Title text="Interest Revenue " style={{color:"white"}} />
           {/* <br></br> */}
           {/* <Title/>

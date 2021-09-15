@@ -56,9 +56,9 @@ function GroupsView() {
               <GenerateReport style={{display:"inline-block"}}/>
           </div> */}
 
-      <div className="barchart2">
+      {/* <div className="barchart2"> */}
         <Barchart2 />
-      </div>
+      {/* </div> */}
       {/* <div className="piechart1"> */}
          
         {/* <img  style={{ marginLeft:"350px", marginTop:"-120px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBqZN1k8sxai_AK084_LDKANrIxCQiv1kzqg&usqp=CAU"/> */} 

@@ -112,7 +112,7 @@ const Command = ({ id, onExecute }) => {
 };
 
 const availableValues = {
-  product: globalSalesValues.product,
+  accountno: globalSalesValues.accountno,
   region: globalSalesValues.region,
   customer: globalSalesValues.customer,
 };
@@ -169,7 +169,7 @@ const getRowId = row => row.id;
 
 export default () => {
   const [columns] = useState([
-    { name: 'product', title: 'Product' },
+    { name: 'accountno', title: 'Account Number' },
     { name: 'region', title: 'Region' },
     { name: 'amount', title: 'Sale Amount' },
     { name: 'discount', title: 'Discount' },
@@ -181,7 +181,7 @@ export default () => {
     length: 12,
   }));
   const [tableColumnExtensions] = useState([
-    { columnName: 'product', width: 200 },
+    { columnName: 'accountno', width: 200 },
     { columnName: 'region', width: 180 },
     { columnName: 'amount', width: 180, align: 'right' },
     { columnName: 'discount', width: 180 },
@@ -195,7 +195,7 @@ export default () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [pageSize, setPageSize] = useState(0);
   const [pageSizes] = useState([5, 10, 0]);
-  const [columnOrder, setColumnOrder] = useState(['product', 'region', 'amount', 'discount', 'saleDate', 'customer']);
+  const [columnOrder, setColumnOrder] = useState(['accountno', 'region', 'amount', 'discount', 'saleDate', 'customer']);
   const [currencyColumns] = useState(['amount']);
   const [percentColumns] = useState(['discount']);
   const [leftFixedColumns] = useState([TableEditColumn.COLUMN_TYPE]);
@@ -209,7 +209,7 @@ export default () => {
       amount: 0,
       discount: 0,
       saleDate: new Date().toISOString().split('T')[0],
-      product: availableValues.product[0],
+      accountno: availableValues.accountno[0],
       region: availableValues.region[0],
       customer: availableValues.customer[0],
     })),

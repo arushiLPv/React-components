@@ -9,7 +9,7 @@ import {
   Legend,
 } from '@devexpress/dx-react-chart-material-ui';
 import { withStyles } from '@material-ui/core/styles';
-import { Stack, Animation } from '@devexpress/dx-react-chart';
+import { Stack, Animation, EventTracker , HoverState} from '@devexpress/dx-react-chart';
 
 import { InterestBalancePerDay as data } from '../data/Barchart1Data';
 
@@ -27,6 +27,7 @@ const Root = withStyles(legendStyles, { name: 'LegendRoot' })(legendRootBase);
 const legendLabelStyles = () => ({
   label: {
     whiteSpace: 'nowrap',
+    color: 'black'
   },
 });
 const legendLabelBase = ({ classes, ...restProps }) => (
@@ -47,7 +48,7 @@ export default class Barchart2 extends React.PureComponent {
     const { data: chartData } = this.state;
 
     return (
-      <Paper style={{height:"300px", width:"250px"}}>
+      <Paper style={{height:"400px", width:"450px", marginLeft:"37px", marginTop:"0px", float:"left", clear:"both", marginRight:"20px", background:"white"}}>
         <Chart
           data={chartData}
         >
@@ -58,13 +59,13 @@ export default class Barchart2 extends React.PureComponent {
             name="Interest"
             valueField="Interest"
             argumentField="account"
-            color="#ffd700"
+            color="dodgerblue"
           />
           <BarSeries
             name="Balance"
             valueField="Balance"
             argumentField="account"
-            color="#c0c0c0"
+            color="darkblue"
           />
           {/* <BarSeries
             name="Bronze Medals"
@@ -74,6 +75,8 @@ export default class Barchart2 extends React.PureComponent {
           /> */}
           <Animation />
           <Legend position="bottom" rootComponent={Root} labelComponent={Label} />
+          {/* <EventTracker/>
+          <HoverState /> */}
           <Title text="Transaction History " />
           <Stack />
         </Chart>

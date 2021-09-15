@@ -118,7 +118,7 @@ export const globalSalesValues = {
     'Renewable Supplies', 'Energy Systems', 'Environment Solar', 'Beacon Systems', 'Apollo Inc',
     'Gemini Stores', 'McCord Builders', 'Building M Inc', 'Global Services',
     'Market Eco', 'Johnson & Assoc', 'Get Solar Inc', 'Supply Warehouse', 'Discovery Systems', 'Mercury Solar'],
-  product: ['SolarMax', 'SolarOne', 'EnviroCare', 'EnviroCare Max'],
+  accountno: ['1908653', '5463922', '6574893', '3784099','5646437', '9847595','4535463', '8738732', '6475743', '4563564','2536473','9879879'],
   amount: ({ random }) => (Math.floor((random() * 1000000) + 1000) / 20),
   discount: ({ random }) => Math.round(random() * 0.5 * 1000) / 1000,
   saleDate: ({ random }) => generateDate({
